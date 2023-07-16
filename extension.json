@@ -6,6 +6,8 @@
     "version": "1.0",
     "categories": ["commands"],
     "repository": "https://github.com/ctkjose/Markers.novaextension",
+    "bugs": "https://github.com/ctkjose/Markers.novaextension/issues",
+    
     "main": "main.js",
     
     "activationEvents": [
