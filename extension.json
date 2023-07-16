@@ -23,7 +23,7 @@
             {
                 "title": "Show markers...",
                 "command": "expw-markers.show-markers"
-            },
+            }
         ]
     },
     
