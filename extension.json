@@ -5,7 +5,7 @@
     "description": "Browse markers and symbols.",
     "version": "1.0",
     "categories": ["commands"],
-    
+    "repository": "https://github.com/ctkjose/Markers.novaextension",
     "main": "main.js",
     
     "activationEvents": [
