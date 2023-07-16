@@ -22,7 +22,7 @@ function parseMarkers(editor){
 	];
 	
 	let patterns = nova.config.get("exw-markers.regex");
-	if(patterns) patterns = defaults;
+	if(!patterns) patterns = defaults;
 	let tests = [];
 	
 	for(let pattern of patterns){
