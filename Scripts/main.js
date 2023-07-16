@@ -12,7 +12,7 @@ exports.deactivate = function() {
 }
 
 
-nova.commands.register("exw-markers.show-markers", (workspace) => {
+nova.commands.register("expw-markers.show-markers", (workspace) => {
     
     let editor = nova.workspace.activeTextEditor;
     if(!editor) return;
@@ -44,7 +44,7 @@ nova.commands.register("exw-markers.show-markers", (workspace) => {
 });
 
 
-nova.commands.register("exw-markers.runExternalTool", (workspace) => {
+nova.commands.register("expw-markers.runExternalTool", (workspace) => {
     var options = {
         "placeholder": "/path/to/tool",
         "prompt": "Run"

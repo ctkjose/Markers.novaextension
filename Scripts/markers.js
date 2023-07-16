@@ -21,7 +21,7 @@ function parseMarkers(editor){
 		"^\\s*#pragma\\s*mark\\s(.*)$"
 	];
 	
-	let patterns = nova.config.get("exw-markers.regex");
+	let patterns = nova.config.get("expw-markers.regex");
 	if(!patterns) patterns = defaults;
 	let tests = [];
 	
