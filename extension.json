@@ -1,0 +1,45 @@
+{
+    "identifier": "EXPW.markers",
+    "name": "Markers",
+    "organization": "ExponentialWorks",
+    "description": "Browse markers and symbols.",
+    "version": "1.0",
+    "categories": ["commands"],
+    
+    "main": "main.js",
+    
+    "activationEvents": [
+        "*"
+    ],
+    
+    "entitlements": {
+        "clipboard": true, "filesystem": "readwrite", "process": true
+    },
+    
+    "commands": {
+        "extensions": [
+            {
+                "title": "Show markers",
+                "command": "exw-markers.show-markers"
+            },
+            {
+                "title": "Run External Tool",
+                "command": "bookmarks.runExternalTool"
+            }
+        ]
+    },
+    
+    "config": [
+        {
+            "key": "exw-markers.regex",
+            "title": "Bookmark Comment",
+            "description": "Regex for marker comments. Marker comments must appear on a line by themselves. The text of the marker is the last capture group.",
+            "type": "stringArray",
+            "default": [
+                "^[ \\t]*//[ \\t]*![ \\t]*(.*)[ \\t]*$",
+                "^[ \\t]*//[ \\t]*((MARK|TODO|FIXME):[ \\t]+(.*))$",
+                "^[ \\t]*/\\*[ \\t]*![ \\t]*(.*)[ \\t]*\\*/$"
+            ]
+        }
+    ]
+}
