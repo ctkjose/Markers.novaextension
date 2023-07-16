@@ -28,7 +28,7 @@ Also the old Objective C style is also supported.
 
 Markers are defined by simple regular expressions. You can add your own regular expressions or modify them to your liking.
 
-The regular expression is entered without the `/` or modifiers and remember to escape slashes when entering a regular expression.
+The regular expression is entered without the `/.../` or modifiers.
 
 ## Requirements
 

@@ -27,7 +27,7 @@ function parseMarkers(editor){
 	
 	for(let pattern of patterns){
 		try{
-			console.log(pattern);
+			//console.log(pattern);
 			let re = new RegExp(pattern, 'mi');
 			tests.push(re);
 		}catch(err){
@@ -41,7 +41,7 @@ function parseMarkers(editor){
 		let s = m[0];
 		let lbl = m.pop();
 		
-		console.log("Line=%d, Pos:%d", ln, pos);
+		//console.log("Line=%d, Pos:%d", ln, pos);
 		items.push({ name: lbl, text: s, line: ln, pos: pos });
 		
 	};
@@ -52,7 +52,7 @@ function parseMarkers(editor){
 		for(let re of tests){
 			let m = re.exec(s);
 			if(m){
-				console.log("LN[%d]  = [%s]", ln, s);
+				//console.log("LN[%d]  = [%s]", ln, s);
 				matched(m);
 				break;
 			}
