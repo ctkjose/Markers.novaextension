@@ -15,19 +15,20 @@ function parseMarkers(editor){
 	
 	
 	let defaults = [
-		"^[ \\t]*//[ \\t]*![ \\t]*(.*)[ \\t]*$",
-		"^[ \\t]*//[ \\t]*((MARK|TODO|FIXME):[ \\t]+(.*))$",
-		"^[ \\t]*/\\*[ \\t]*![ \\t]*(.*)[ \\t]*\\*/$"
+		"^\\s*//\\s*!\\s*(.*)\\s*$",
+		"^\\s*//\\s*((MARK|TODO|FIXME):\\s+(.*))$",
+		"^\\s*/\\*\\s*!\\s*(.*)\\s*\\*/$",
+		"^\\s*#pragma\\s*mark\\s(.*)$"
 	];
 	
 	let patterns = nova.config.get("exw-markers.regex");
-	if(!patterns) patterns = defaults;
+	if(patterns) patterns = defaults;
 	let tests = [];
 	
 	for(let pattern of patterns){
 		try{
 			console.log(pattern);
-			let re = new RegExp(pattern, 'g');
+			let re = new RegExp(pattern, 'mi');
 			tests.push(re);
 		}catch(err){
 			nova.workspace.showInformativeMessage("A marker regular expression is invalid.");

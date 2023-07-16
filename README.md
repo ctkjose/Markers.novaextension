@@ -1,72 +1,42 @@
-<!--
-👋 Hello! As Nova users browse the extensions library, a good README can help them understand what your extension does, how it works, and what setup or configuration it may require.
 
-Not every extension will need every item described below. Use your best judgement when deciding which parts to keep to provide the best experience for your new users.
+**Markers** provides simple means to quickly jump to special comments called markers.
 
-💡 Quick Tip! As you edit this README template, you can preview your changes by selecting **Extensions → Activate Project as Extension**, opening the Extension Library, and selecting "bookmarks" in the sidebar.
+Nova will recognize comments formatted a certain way as “bookmarks” in supported programming languages. Generally, the format is a comment with a leading exclamation point.
 
-Let's get started!
--->
+```js
+//! Im a bookmark
+/* ! Im also a bookmark */
+```
 
-<!--
-🎈 Include a brief description of the features your extension provides. For example:
--->
+Markers extends this notion by supporting more formats.
 
-**bookmarks** provides integration with **A Helpful Tool**, including the most important feature, something that's really helpful, and _a little-known secret!_
+XCode style markers `MARK`, `TODO`, `FIXME`.
 
-<!--
-🎈 It can also be helpful to include a screenshot or GIF showing your extension in action:
--->
+```js
+//MARK: Initialize the API
+//TODO: Refactor API
+//FIXME: This input must be sanitized...
+```
 
-![](https://nova.app/images/en/dark/editor.png)
+Also the old Objective C style is also supported.
+
+```c
+#pragma mark - Do This
+```
+
+# Configuration
+
+Markers are defined by simple regular expressions. You can add your own regular expressions or modify them to your liking.
+
+The regular expression is entered without the `/` or modifiers and remember to escape slashes when entering a regular expression.
 
 ## Requirements
 
-<!--
-🎈 If your extension depends on external processes or tools that users will need to have, it's helpful to list those and provide links to their installers:
--->
-
-bookmarks requires some additional tools to be installed on your Mac:
-
-- [Node.js 8.2.0](https://nodejs.org) and NPM 5.2.0 or newer
-
-<!--
-✨ Providing tips, tricks, or other guides for installing or configuring external dependencies can go a long way toward helping your users have a good setup experience:
--->
-
-> To install the current stable version of Node, click the "Recommended for Most Users" button to begin the download. When that completes, double-click the **.pkg** installer to begin installation.
+This extension does have any external dependancies or uses additional executables.
 
 ## Usage
 
-<!--
-🎈 If users will interact with your extension manually, describe those options:
--->
+To run Markers:
 
-To run bookmarks:
+- Open the command palette and type `Marker`
 
-- Select the **Editor → bookmarks** menu item; or
-- Open the command palette and type `bookmarks`
-
-<!--
-🎈 Alternatively, if your extension runs automatically (as in the case of a validator), consider showing users what they can expect to see:
--->
-
-bookmarks runs any time you open a local project, automatically lints all open files, then reports errors and warnings in Nova's **Issues** sidebar and the editor gutter:
-
-![](https://nova.app/images/en/light/tools/sidebars.png)
-
-### Configuration
-
-<!--
-🎈 If your extension offers global- or workspace-scoped preferences, consider pointing users toward those settings. For example:
--->
-
-To configure global preferences, open **Extensions → Extension Library...** then select bookmarks's **Preferences** tab.
-
-You can also configure preferences on a per-project basis in **Project → Project Settings...**
-
-<!--
-👋 That's it! Happy developing!
-
-P.S. If you'd like, you can remove these comments before submitting your extension 😉
--->

@@ -36,9 +36,10 @@
             "description": "Regex for marker comments. Marker comments must appear on a line by themselves. The text of the marker is the last capture group.",
             "type": "stringArray",
             "default": [
-                "^[ \\t]*//[ \\t]*![ \\t]*(.*)[ \\t]*$",
-                "^[ \\t]*//[ \\t]*((MARK|TODO|FIXME):[ \\t]+(.*))$",
-                "^[ \\t]*/\\*[ \\t]*![ \\t]*(.*)[ \\t]*\\*/$"
+                "^\\s*//\\s*!\\s*(.*)\\s*$",
+                "^\\s*//\\s*((MARK|TODO|FIXME):\\s+(.*))$",
+                "^\\s*/\\*\\s*!\\s*(.*)\\s*\\*/$",
+                "^\\s*#pragma\\s*mark\\s(.*)$"
             ]
         }
     ]
