@@ -127,7 +127,7 @@ var ide = exports.ide = {
 			
 		}, 200);
 	},
-	#pragma mark - Do This
+
 	init: function(){
 		this.emitter = new Emitter();
 		this.disposables = new CompositeDisposable();
@@ -360,9 +360,6 @@ var ide = exports.ide = {
 		
 	}
 };
-
-
-
 
 //FIXME: fix this stuff
 ide.getFileInfo = function(path){

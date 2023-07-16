@@ -39,4 +39,4 @@ This extension does have any external dependancies or uses additional executable
 To run Markers:
 
 - Open the command palette and type `Marker`
-
+- Select "Show markers..." from the editor menu.

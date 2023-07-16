@@ -17,15 +17,11 @@
     },
     
     "commands": {
-        "extensions": [
+        "editor": [
             {
-                "title": "Show markers",
+                "title": "Show markers...",
                 "command": "exw-markers.show-markers"
             },
-            {
-                "title": "Run External Tool",
-                "command": "bookmarks.runExternalTool"
-            }
         ]
     },
     
